@@ -1,31 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 .App {
-  text-align: center;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+  grid-template-rows: 1fr 6fr 1fr;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  background: #efefef;
+  grid-column: 1/3;
+  background: #3b5998;
+}
+.sidebar {
+  background: #ccc;
+}
+.footer {
+  background: #ddd;
+  grid-column: 1/3;
+}
+
+/* header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+.header h1 {
+  color: #fff;
+}
+.header ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+.header ul > li {
+  color: #fff;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.sidebar {
+  background: #efefef;
+}
+.footer {
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer > p {
+  color: #777;
+  font-size: 12px;
+}
+
+.contents {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+  padding: 1rem;
+  align-items: center;
+}
+.contents > div {
+  border: 3px solid #efefef;
+  padding: 1rem;
+  border-radius: 7px;
+}
+.contents > div canvas {
+  max-width: 100%;
+  min-width: 300px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
